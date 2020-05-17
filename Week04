@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+function checkNum() {
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numberInput").value;
+
+  // If x is Not a Number or less than one or greater than 590
+  if (isNaN(x) || x < 1 || x > 590) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("test").innerHTML = text;
+}
+
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Check Num</h2>
+
+<p>Please input a number between 1 and 590:</p>
+
+<input id="numberInput">
+
+<button type="button" onclick="checkNum()">Submit</button>
+
+<p id="test"></p>
+
+</body>
+</html>
