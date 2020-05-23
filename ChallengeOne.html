@@ -3,13 +3,18 @@
 <html>
 <head>
 <script>
-
+function addNewItem(){
+ var newItem = document.getElementById("addItem").innerHTML;
+ document.getElementById("list").innerHTML = newItem;
+}
 
 </script>
 </head>
 <body>
 
   <h1>Todos</h1>
+  <br>
+  <p id="list"></p>
   <br>
   
   <input type="radio" id="All" name="filter" value="All">
