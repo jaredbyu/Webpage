@@ -9,7 +9,7 @@
  var thelist = ["test","Hello"];
 function addNewItem(){
  var newItem = document.getElementById("addItem").innerHTML;
- newItem = newItem.toString();
+ newItem = newItem.outerHTML;
  
  thelist.push(newItem);
  var x = thelist.toString();
