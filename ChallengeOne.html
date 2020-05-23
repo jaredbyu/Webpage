@@ -3,8 +3,9 @@
 <html>
 <head>
  <style>
-  div.solid {border-style: solid;
-             width: 300px;}
+  .item {border-style: solid;
+             width: 200px;}
+  .solid{border-style: solid;}
  </style>
 <script>
  var thelist = ["test","Hello"];
@@ -37,11 +38,11 @@ function addNewItem(){
   <label for="Completed">Completed</label>
   
   <br>
-  <div class="solid">
+  
    
-   <input type="text" id="addItem" name="addItem">
-   <button type="button" onclick="addNewItem()">+</button>
- </div>
+   <input type="text" id="addItem" name="addItem" class="solid">
+   <button type="button" onclick="addNewItem()" class="solid">+</button>
+ 
   <br>
   
 </body>
