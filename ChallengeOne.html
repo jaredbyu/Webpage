@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <style>
+  div.solid {border-style: solid;}
+ </style>
 <script>
  var thelist = ["test","Hello"];
 function addNewItem(){
@@ -11,7 +14,7 @@ function addNewItem(){
  thelist.push(newItem);
  var x = thelist.toString();
  document.getElementById("list").innerHTML = x;
- document.getElementById("test").innerHTML = "Hello World";
+ 
 }
 
 </script>
@@ -21,7 +24,7 @@ function addNewItem(){
   <h1>Todos</h1>
   <br>
   <p id="list"></p>
- <p id="test">test</p>
+ 
   <br>
   
   <input type="radio" id="All" name="filter" value="All">
@@ -32,10 +35,11 @@ function addNewItem(){
   <label for="Completed">Completed</label>
   
   <br>
-  
-  <label for="addItem"></label>
-  <input type="text" id="addItem" name="addItem">
-  <button type="button" onclick="addNewItem()">+</button>
+  <div class="solid">
+   
+   <input type="text" id="addItem" name="addItem">
+   <button type="button" onclick="addNewItem()">+</button>
+ </div>
   <br>
   
 </body>
