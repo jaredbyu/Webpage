@@ -3,9 +3,12 @@
 <html>
 <head>
 <script>
+ var thelist = ["test","Hello"];
 function addNewItem(){
  var newItem = document.getElementById("addItem").innerHTML;
- document.getElementById("list").innerHTML = newItem;
+ thelist.push(newItem);
+ var x = thelist.toString();
+ document.getElementById("list").innerHTML = x;
 }
 
 </script>
