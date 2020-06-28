@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <!-- basic.html -->
+  <title>Validation</title>
+  <meta charset = "UTF-8" />
+  <style>
+  form {
+  font: 1em sans-serif;
+  max-width: 320px;
+}
+
+p > label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+fieldset {
+  width : 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+  </style>
+</head>
+<body>
+  <form>
+  <p>
+    <fieldset>
+      <legend>Is This a required Field?<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+      
+      <input type="radio" required name="radioB" id="r1" value="yes"><label for="r1">Yes</label>
+      <input type="radio" required name="radioB" id="r2" value="no"><label for="r2">No</label>
+    </fieldset>
+  </p>
+  <p>
+    <label for="n1">What Boat does Han Solo Fly in the Star Trek Fellowship?</label>
+    
+    <input type="text" id="n1" name="shipName"
+           pattern="\d+">
+  </p>
+  <p>
+    <label for="t1">What is your name?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+    <input type="text" id="t1" name="fruit" list="l1" required
+           pattern="[Jj]ake|[Ss]arah|[Pp]aul|[Kk]atie|[Hh]elecpter|[Bb]lue">
+    <datalist id="l1">
+      <option>Jake</option>
+      <option>Sarah</option>
+      <option>Paul</option>
+      <option>Katie</option>
+      <option>Helecopter</option>
+      <option>Blue</option>
+    </datalist>
+  </p>
+  <p>
+    <label for="t2">What's your e-mail address?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+    <input type="email" id="t2" name="email">
+  </p>
+  <p>
+    <label for="t3">Hope You had a good time</label>
+    <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+  </p>
+  <p>
+    <button>Submit</button>
+  </p>
+</form>
+</body>
+</html>
