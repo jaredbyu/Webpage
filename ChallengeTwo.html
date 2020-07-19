@@ -1,9 +1,166 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Brown Town Paper</title>
+
+<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
 <body>
 
-<h1>Brown Town Paper</h1>
-<p>We Sell Paper</p>
+  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+      </li>
+        
+       <li>
+        <a href="file:///C:/Users/jared/Desktop/BrownTownPaper/views/pages/inventory.html"><span class="glyphicon glyphicon-info-sign"></span> See Inventory</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<p id="demo">THIS IS TEST TIME</p>
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="center">
+      <img src="paper_title.png">
+    </a>
+    <h1>Welcome to Brown Town Paper inc.</h1>
+    <p><i>"Real buisness is done on paper"</i> - Michael Scott</p>
+      <p>-<b>Twitter Activation</b>-</p>
+    <button type="button" class="btn btn-lg btn-primary" onclick="changeT()">
+        Start Tweets</button>
+    <button type="button" class="btn btn-lg btn-primary" onclick="changeF()">
+        Stop Tweets</button>
+      <p id ="twitterStatus">Twitter Flow Currently: Active</p>
+  </div>
+    
+    
+    
+</div>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    All new customers will recive a 10% discount! 
+  </div>
+  <hr>
+     <div class="center">
+       
+   <form action="/checkout" method="get">
+            <h1>Quick Checkout</h1>
+            <br>
+            Select Type: 
+            <select name="type">
+                <option>Bond</option>
+                <option>Newsprint</option>
+                <option>Card Stock</option>
+                <option>Construction Paper</option>
+                <option>Offset</option>
+                <option>Ledger</option>
+                <option>Index</option>
+                <option>Cover</option>
+            </select>
+       
+        <select name="color">
+                <option>White</option>
+                <option>Green</option>
+                <option>Red</option>
+                <option>Black</option>
+                <option>Yellow</option>
+                <option>Blue</option>
+                <option>Brown</option>
+            </select>
+            <br><br>
+         Quantity In Boxes:
+            <input type="text" name="amount">
+       <br><br>
+       <button type="submit" value="Submit" class="btn btn-info btn-lg">
+       <span class="glyphicon glyphicon-shopping-cart"></span> Checkout
+       </button>
+       
+        </form>
+       </div>
+    
+    
+    
+    
+</div>
+   
+    <h2>Paper Tweets</h2>
+    <div id="result">
+    <ul id="paperMessages"></ul> 
+    
+    </div>
+ 
+    
+    <script>
+        
+        function myFunction(a, b) {
+  return a * b;
+}
 
+        
+
+const Twit = require('twit')
+const notifier = require('node-notifier');
+const open = require('open');
+const franc = require('franc')
+
+const apikey = '4puMWeFU7uVev8xnTMZLBnYvP'
+const apiSecretKey = '5mFpcNGl7fEUSYhwEStjuFVPVMzIhFXfAd3UmiyoHqSBDJO7dE'
+const accessToken = '1284897671220609025-bEvvZ2dO5YoTt40NZKfsRIm1IK2OBD'
+const accessTokenSecret = '0Eblxmb7b0hmbokzURbSjbHWgKf9l3pRcQpotwoFKEyVp'
+
+var T = new Twit({
+  consumer_key:         apikey,
+  consumer_secret:      apiSecretKey,
+  access_token:         accessToken,
+  access_token_secret:  accessTokenSecret,
+});
+
+(async () => {
+
+    // //1. GET RECENT TWEETS
+     T.get('search/tweets', { q: '#paper since:2020-04-15', count: 100 }, function(err, data, response) {
+       const tweets = data.statuses
+       // .map(tweet => `LANG: ${franc(tweet.text)} : ${tweet.text}`) //CHECK LANGUAGE
+       .map(tweet => tweet.text)
+       .filter(tweet => tweet.toLowerCase().includes('elon'));
+       console.log(tweets);
+         document.getElementById('demo').innerHTML = tweets;
+     })
+
+    // //2. REAL TIME MONITORING USING STREAM (HASHTAG)
+    // var stream = T.stream('statuses/filter', { track: '#tesla' })
+    // stream.on('tweet', function (tweet) {
+    //     console.log(tweet.text);
+    //     console.log('Language: ' + franc(tweet.text));
+    //     console.log('------');
+    // })
+
+    // 3. REAL TIME MONITORING USING STREAM (LOCATION)
+    //var sanFrancisco = [ '-122.75', '36.8', '-121.75', '37.8' ]
+    //var stream = T.stream('statuses/filter', { locations: sanFrancisco })
+    
+    //SHOW NOTIFICATION FOR EACH RECEIVED TWEET
+    //stream.on('tweet', function (tweet) {
+     // console.log(tweet.text);
+      //let url = `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`
+
+     // notifier.notify({
+      //  title: tweet.user.name,
+      //  message: tweet.text
+      });
+
+      notifier.on('click', async function(notifierObject, options, event) {
+        console.log('clicked');
+        await open(url);
+      });
+    })
+})();
+    </script>
+    
+    
 </body>
 </html>
