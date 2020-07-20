@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>JSON Test</title>
+  </head>
 <body>
 
-<h1>JSON Test</h1>
-<p>Cool Jason</p>
+<h2>Create Object from JSON String</h2>
+  <p>JSON object here is an array of strings representing a json object</p>
+<p id="test"></p>
+
+<script>
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("test").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
 
 </body>
 </html>
