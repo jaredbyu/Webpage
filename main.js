@@ -1,5 +1,3 @@
-
-<scirpt>
 const Twit = require(['twit'])
 //const notifier = require([node-notifier]);
 //const open = require([open]);
@@ -54,4 +52,4 @@ var T = new Twit({
       
     //})
 //})();
-    </script>
+  
