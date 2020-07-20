@@ -1,10 +1,10 @@
 const Twit = require('twit')
 
 
-const apikey = '4puMWeFU7uVev8xnTMZLBnYvP'
-const apiSecretKey = '5mFpcNGl7fEUSYhwEStjuFVPVMzIhFXfAd3UmiyoHqSBDJO7dE'
-const accessToken = '1284897671220609025-bEvvZ2dO5YoTt40NZKfsRIm1IK2OBD'
-const accessTokenSecret = '0Eblxmb7b0hmbokzURbSjbHWgKf9l3pRcQpotwoFKEyVp'
+const apikey = '4pvP'
+const apiSecretKey = '5JO7dE'
+const accessToken = '12RIm1IK2OBD'
+const accessTokenSecret = ''
 document.getElementById('demo').innerHTML = 'yeet';
 var T = new Twit({
   consumer_key:         apikey,
