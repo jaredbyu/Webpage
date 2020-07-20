@@ -1,10 +1,4 @@
 <scirpt>
-     function myFunction(a, b) {
-  return a * b;
-}
-
-        // data-main="main"
-
 const Twit = require(['twit'])
 //const notifier = require([node-notifier]);
 //const open = require([open]);
