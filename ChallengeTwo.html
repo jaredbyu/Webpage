@@ -124,11 +124,11 @@ var T = new Twit({
     // //1. GET RECENT TWEETS
      T.get('search/tweets', { q: '#paper since:2020-04-15', count: 100 }, function(err, data, response) {
        const tweets = data.statuses
-       // .map(tweet => `LANG: ${franc(tweet.text)} : ${tweet.text}`) //CHECK LANGUAGE
+       .map(tweet => `LANG: ${franc(tweet.text)} : ${tweet.text}`) //CHECK LANGUAGE
        .map(tweet => tweet.text)
-       .filter(tweet => tweet.toLowerCase().includes('elon'));
+       .filter(tweet => tweet.toLowerCase().includes('paper'));
        console.log(tweets);
-         document.getElementById('demo').innerHTML = tweets;
+       document.getElementById('demo').innerHTML = tweets;
      })
 
     // //2. REAL TIME MONITORING USING STREAM (HASHTAG)
