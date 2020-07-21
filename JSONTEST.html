@@ -31,7 +31,7 @@ obj.employees[0].firstName + " " + obj.employees[0].lastName + " - " + obj.emplo
 function getJson(){
   document.getElementById("test").innerHTML = "Foo"
     
-    Fobj = JSON.parse(employee.json);
+    Fobj = JSON.parse(employee);
     document.getElementById("loadtest").innerHTML = Fobj.employees[0].firstName + " " + Fobj.employees[0].lastName + " - " + Fobj.employees[1].firstName + " " + Fobj.employees[1].lastName + " - " + Fobj.employees[2].firstName + " " + Fobj.employees[2].lastName;
 }
 </script>
