@@ -16,7 +16,7 @@
   <p>Now We will load a Json File, and display it but with real JSON data!</p>
   <button onclick="getJson()">Load Employee JSON File</button>
   <p id="loadtest"></p>
-  
+  <script type="text/javascript" src="employee.json></script>
 <script>
 var text = '{"employees":[' +
 '{"firstName":"John","lastName":"Doe" },' +
@@ -29,9 +29,8 @@ obj.employees[0].firstName + " " + obj.employees[0].lastName + " - " + obj.emplo
   
 function getJson(){
   document.getElementById("test").innerHTML = "Foo"
-  rawText = localStorage.getItem("employee");
-   // rawText = JSON.parse(employee);
-    Fobj = JSON.parse(rawText);
+
+    Fobj = JSON.parse(employee);
     document.getElementById("loadtest").innerHTML = Fobj.employees[0].firstName + " " + Fobj.employees[0].lastName + " - " + Fobj.employees[1].firstName + " " + Fobj.employees[1].lastName + " - " + Fobj.employees[2].firstName + " " + Fobj.employees[2].lastName;
 }
 </script>
