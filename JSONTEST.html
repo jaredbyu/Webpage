@@ -6,10 +6,18 @@
 <body>
 
 <h2>Create Object from JSON String</h2>
-  <p>JSON object here is an array of strings representing a json object</p>
+  <p>JSON object here is an array of strings representing a json object.</p>
+  <br>
+  <p>List of all employees</p>
 <p id="test"></p>
 
-<script>
+ <br><br>
+  
+  <p>Now We will load a Json File, display it, add to it, and update it.</p>
+  <button onclick="getJson()">Load Employee JSON File</button>
+  <p id="loadtest"></p>
+  
+<script src="employee.json">
 var text = '{"employees":[' +
 '{"firstName":"John","lastName":"Doe" },' +
 '{"firstName":"Anna","lastName":"Smith" },' +
@@ -17,7 +25,13 @@ var text = '{"employees":[' +
 
 obj = JSON.parse(text);
 document.getElementById("test").innerHTML =
-obj.employees[1].firstName + " " + obj.employees[1].lastName;
+obj.employees[0].firstName + " " + obj.employees[0].lastName + " - " + obj.employees[1].firstName + " " + obj.employees[1].lastName + " - " + obj.employees[2].firstName + " " + obj.employees[2].lastName;
+  
+  function getJson(){
+    rawText = JSON.parse(employee);
+   Fobj = JSON.parse(rawText);
+   document.getElementById("loadtest").innerHTML = Fobj.employees[0].firstName + " " + Fobj.employees[0].lastName + " - " + Fobj.employees[1].firstName + " " + Fobj.employees[1].lastName + " - " + Fobj.employees[2].firstName + " " + Fobj.employees[2].lastName;
+  }
 </script>
 
 </body>
