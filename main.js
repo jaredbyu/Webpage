@@ -5,7 +5,7 @@ const apikey = '4pvP'
 const apiSecretKey = '5JO7dE'
 const accessToken = '12RIm1IK2OBD'
 const accessTokenSecret = ''
-document.getElementById('demo').innerHTML = 'yeet';
+
 var T = new Twit({
   consumer_key:         apikey,
   consumer_secret:      apiSecretKey,
@@ -15,10 +15,10 @@ var T = new Twit({
 
 (async () => {
 
-     var stream = T.stream('statuses/filter', { track: '#tesla' })
+     var stream = T.stream('statuses/filter', { track: '#paper' })
      stream.on('tweet', function (tweet) {
          console.log(tweet.text);
-         document.getElementById('demo').innerHTML = 'yeet';
+         
          console.log('------');
      })
       });
