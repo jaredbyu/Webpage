@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brown Town Paper</title>
+
+<link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+    </style>
+</head>
+
+<body class="green">
+
+ 
+  
+<ul>
+  <li><a class="active" href="https://jaredbyu.github.io/Webpage/ChallengeTwo.html">Home</a></li>
+  <li><a href="https://jaredbyu.github.io/Webpage/inventory.html">Inventory</a></li>
+  
+</ul>
+  
+
+
+
+  <div class="center">
+    <a href="/" class="center">
+      <img src="paper_title.png">
+    </a>
+    <h1>Welcome to Brown Town Paper inc.</h1>
+    <p><i>"Real buisness is done on paper"</i> - Michael Scott</p>
+      <p>-<b>Twitter Activation</b>-</p>
+    <button type="button" class="btn btn-lg btn-primary" onclick="changeT()">
+        Start Tweets</button>
+    <button type="button" class="btn btn-lg btn-primary" onclick="changeF()">
+        Stop Tweets</button>
+      <p id ="twitterStatus">Twitter Flow Currently: Active</p>
+  </div> 
+
+<div class="center">
+  <div class="alert alert-info text-center" role="alert">
+    All new customers will recive a 10% discount! 
+  </div>
+  <hr>
+     <div class="center">
+       
+   <form action="/checkout" method="get">
+            <h1>Quick Checkout</h1>
+            <br>
+            Select Type: 
+            <select name="type">
+                <option>Bond</option>
+                <option>Newsprint</option>
+                <option>Card Stock</option>
+                <option>Construction Paper</option>
+                <option>Offset</option>
+                <option>Ledger</option>
+                <option>Index</option>
+                <option>Cover</option>
+            </select>
+       
+        <select name="color">
+                <option>White</option>
+                <option>Green</option>
+                <option>Red</option>
+                <option>Black</option>
+                <option>Yellow</option>
+                <option>Blue</option>
+                <option>Brown</option>
+            </select>
+            <br><br>
+         Quantity In Boxes:
+            <input type="text" name="amount">
+       <br><br>
+       <button type="submit" value="Submit" class="btn btn-info btn-lg">
+       <span class="glyphicon glyphicon-shopping-cart"></span> Checkout
+       </button>
+       
+        </form>
+       </div>
+ 
+</div>
+   
+    <script>        
+
+    </script>
+    
+    
+</body>
+</html>

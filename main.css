@@ -1,0 +1,90 @@
+.jumbotron {
+  background: #069043;
+  color: white;
+  padding-bottom: 80px; }
+
+  .jumbotron .btn-primary {
+    background: #47BF5A;
+    border-color: #069043; }
+
+    .jumbotron .btn-primary:hover {
+      background: #00FF28; }
+
+  .jumbotron p {
+    
+    max-width: 75%;
+    margin: 1em auto 2em; }
+
+  .navbar + .jumbotron {
+    margin-top: -20px; }
+
+.center{
+    margin: auto;
+    width: 30%;
+    padding: 10px; 
+}
+
+.inventory{
+    float:left;
+    font-size:150%;
+    width:40%;
+    padding:20px;
+}
+
+li a{
+      display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.size{
+font-size:200%;    
+    
+}
+
+.color{
+    
+    border: 2px solid;
+    border-color:#5D625E;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+
+}
+
+.red{
+    background-color:red;
+}
+.white{
+    background-color:white;
+}
+.brown{
+    color:brown;
+    background-color:#4B3E04;
+}
+.black{
+    background-color:black;
+}
+.yel{
+    background-color:yellow;
+}
+.green{
+    background-color:green;
+}
+.blue{
+    background-color:blue;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.container {
+    padding: 16px;
+}
+

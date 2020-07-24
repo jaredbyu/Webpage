@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+    </style>
+</head>
+
+<body class="green">
+<ul>
+  <li><a href="file:///C:/Users/jared/Desktop/BrownTownPaper/views/pages/index.html">Home</a></li>
+  <li><a class="active" href="file:///C:/Users/jared/Desktop/BrownTownPaper/views/pages/inventory.html">Inventory</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+    
+   <div class="center">
+       
+   <form action="/checkout" method="get">
+            <h1>Inventory</h1>
+            <br>
+            Select Type: 
+            <select name="type">
+                <option>Bond</option>
+                <option>Newsprint</option>
+                <option>Card Stock</option>
+                <option>Construction Paper</option>
+                <option>Offset</option>
+                <option>Ledger</option>
+                <option>Index</option>
+                <option>Cover</option>
+            </select>
+       
+        <select name="color">
+                <option>White</option>
+                <option>Green</option>
+                <option>Red</option>
+                <option>Black</option>
+                <option>Yellow</option>
+                <option>Blue</option>
+                <option>Brown</option>
+            </select>
+            <br><br>
+         Quantity In Boxes:
+            <input type="text" name="amount">
+       <br><br>
+       <button type="submit" value="Submit" class="btn btn-info btn-lg">
+       <span class="glyphicon glyphicon-shopping-cart"></span> Checkout
+       </button>
+       
+        </form>
+       
+
+    <table style="width:65%">
+    <tr>
+        <th>Style</th>
+        <th>Example</th>
+        <th>Price Per Box</th>
+    </tr>
+    <tr>
+        <th>Bond</th>
+        <th><img src="bond.jpg" alt="bond.jpg" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+        <tr>
+        <th>Newsprint</th>
+        <th><img src="newsprint.jpg" alt="Paper" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+        <tr>
+        <th>Card Stock</th>
+        <th><img src="cardstock.jpg" alt="Paper" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+        <tr>
+        <th>Construction</th>
+        <th><img src="construction.jpg" alt="Paper" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+        <tr>
+        <th>Offset</th>
+        <th><img src="offset.jpg" alt="Paper" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+        <tr>
+        <th>Ledger</th>
+        <th><img src="ledger.jpg" alt="Paper" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+        <tr>
+        <th>Index</th>
+        <th><img src="index.jpg" alt="Paper" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+        <tr>
+        <th>Cover</th>
+        <th><img src="cover.jpg" alt="Paper" width="160" height="140"></th>
+        <th>&ensp;$30</th>
+    </tr>
+    
+    
+    
+    
+    </table>
+    
+  </div>
+    
+</body>
+</html>
