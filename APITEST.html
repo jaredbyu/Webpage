@@ -2,8 +2,21 @@
 <html>
 <body>
 
-<h1>API Test</h1>
-<p>Cool Stuff</p>
+<h2>JavaScript addEventListener()</h2>
+
+
+
+<button id="myBtn">Anyone Listening?</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = "I Was, Here is the date for no reason - " + Date();
+}
+</script>
 
 </body>
-</html>
+</html> 
